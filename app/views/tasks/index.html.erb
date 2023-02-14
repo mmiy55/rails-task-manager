@@ -1,0 +1,9 @@
+<div class="container">
+<h1> My Tasks</h1>
+
+<%@tasks.each do |t|%>
+<p><i class="fa-regular fa-square-check"></i>
+  <%= link_to t.title, task_path(t.id) %>
+<% end %>
+
+</div>
