@@ -4,6 +4,9 @@
 <%@tasks.each do |t|%>
 <p><i class="fa-regular fa-square-check"></i>
   <%= link_to t.title, task_path(t.id) %>
+   <i class="fa-regular fa-trash-can"></i>
+  <%= link_to "x", task_path(t.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+
 <% end %>
 
 </div>
